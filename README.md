@@ -7,7 +7,7 @@ npx create-nx-workspace@latest
 
 Next JS - Graphql APIs
 
-npm install -D @nrwl/nest @nestjs/graphql apollo-server-express graphql-tools graphql @nestjs/apollo
+npm install -D @nrwl/nest @nestjs/graphql apollo-server-express graphql-tools graphql @nestjs/apollo ts-morph supertest
 nx g @nrwl/nest:app customer-api
 nx:serve customer-api
 
