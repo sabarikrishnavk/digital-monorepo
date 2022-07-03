@@ -1,0 +1,17 @@
+type Customer {
+    id: ID!
+    name: String
+    age: Int
+    status: String
+}
+
+type Query {
+ 
+    getCustomers: [Customer] 
+    getCustomer(id: ID!): Customer
+    
+}
+
+type Mutation {
+    updateCustomer( id: ID!,name: String, age: Int): Customer
+}

@@ -1,6 +1,19 @@
 
 
 # DigitalMonorepo
+npx create-nx-workspace@latest
+    workspace : digital-monorepo
+    default > apps
+
+Next JS - Graphql APIs
+
+npm install -D @nrwl/nest @nestjs/graphql apollo-server-express graphql-tools graphql @nestjs/apollo
+nx g @nrwl/nest:app customer-api
+nx:serve customer-api
+
+
+
+
 
 This project was generated using [Nx](https://nx.dev).
 
