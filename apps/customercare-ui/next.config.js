@@ -5,7 +5,22 @@ const withNx = require('@nrwl/next/plugins/with-nx');
  * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
  **/
 const nextConfig = {
-  nx: {
+  webpack(config, { defaultLoaders }) {
+      config.module.rules.push({
+        test: /\.(scss|css)$/,
+        use: [
+          defaultLoaders.babel,
+          {
+            loader: require('styled-jsx/webpack').loader,
+            options: {
+              type: 'global',
+            },
+          },
+        ],
+      })
+      return config;
+    },
+    nx: {
     // Set this to true if you would like to to use SVGR
     // See: https://github.com/gregberge/svgr
     svgr: false,

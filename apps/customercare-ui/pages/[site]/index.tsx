@@ -1,18 +1,18 @@
-import ThemeSelector from '../../components/ThemeSelector'; 
-import { useRouter } from 'next/router'; 
+import { useRouter } from 'next/router';  
+import AppStyles from '../../components/AppStyles';
 
 
 export function Index({props}) { 
-    const router = useRouter() 
-    const { site } = router.query; 
+    const router = useRouter();
+    console.log("Router path : "+ router.query.site);
+    const site= router.query.site; 
 
     return (
-        <>
-        
+        <> 
+        <AppStyles site= {site}/>
         <div className="container"  >  
             <main> 
-            Welcome to {site}
-            <ThemeSelector site={site}/>
+            Welcome to {site} index page
             </main> 
         </div>
         </>

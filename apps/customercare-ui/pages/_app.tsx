@@ -1,19 +1,16 @@
-import { AppProps } from 'next/app';
-import Head from 'next/head';
-import './styles.css';
-import { ThemeProvider } from 'next-themes'
+import { AppProps } from 'next/app'; 
+import Head from 'next/head'; 
+import './styles.css'; 
 
-function CustomApp({ Component, pageProps }: AppProps) {
+function CustomApp({ Component, pageProps }: AppProps) { 
   return (
-    <>
-      <ThemeProvider>
-        <Head>
+    <> 
+        <Head> 
           <title>Welcome to customercare-ui!</title>
         </Head>
         <main className="app">
           <Component {...pageProps} />
-        </main>
-      </ThemeProvider>
+        </main> 
     </>
   );
 }
