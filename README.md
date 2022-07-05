@@ -11,6 +11,11 @@ npm install -D @nrwl/nest @nestjs/graphql apollo-server-express graphql-tools gr
 nx g @nrwl/nest:app customer-api
 nx:serve customer-api
 
+npm install -D tailwindcss@latest postcss@latest autoprefixer@latest next-themes
+npm install -D @nrwl/nest
+nx g @nrwl/next:app customercare-ui
+>> css
+
 
 
 
