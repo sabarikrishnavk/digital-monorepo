@@ -1,11 +1,12 @@
 import { useRouter } from 'next/router';  
-import AppStyles from '../../components/AppStyles';
+import {AppStyles} from '@digital-monorepo/ecom-ui-components';
 
 
-export function Index({props}) { 
+export default function Index() { 
     const router = useRouter();
-    console.log("Router path : "+ router.query.site);
-    const site= router.query.site; 
+    const site= router.query.site ||[]; 
+    // const site = sites[0];
+    console.log("Index Router path : "+ site);
 
     return (
         <> 
@@ -18,5 +19,4 @@ export function Index({props}) {
         </>
 
     ); 
-}
-export default Index;
+} 

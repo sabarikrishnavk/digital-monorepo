@@ -14,6 +14,8 @@ nx:serve customer-api
 npm install -D styled-jsx @types/styled-jsx styled-jsx-plugin-sass node-sass-middleware sass 
 npm install -D @nrwl/nest
 nx g @nrwl/next:app customercare-ui
+
+nx g @nrwl/next:lib ecom-ui-components
 >> css
 
 

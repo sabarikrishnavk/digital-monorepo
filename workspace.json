@@ -4,6 +4,7 @@
   "projects": {
     "customer-api": "apps/customer-api",
     "customercare-ui": "apps/customercare-ui",
-    "customercare-ui-e2e": "apps/customercare-ui-e2e"
+    "customercare-ui-e2e": "apps/customercare-ui-e2e",
+    "ecom-ui-components": "libs/ecom-ui-components"
   }
 }
