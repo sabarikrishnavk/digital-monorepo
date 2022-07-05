@@ -2,9 +2,12 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "catalog-api": "apps/catalog-api",
     "customer-api": "apps/customer-api",
     "customercare-ui": "apps/customercare-ui",
     "customercare-ui-e2e": "apps/customercare-ui-e2e",
-    "ecom-ui-components": "libs/ecom-ui-components"
+    "ecom-ui-components": "libs/ecom-ui-components",
+    "marketing-api": "apps/marketing-api",
+    "order-api": "apps/order-api"
   }
 }

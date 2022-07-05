@@ -10,10 +10,8 @@ type LoyaltyResponse {
     status: String!
 }
 
-type Query {
-  
-    getLoyaltyDetails(customerid: ID!): LoyaltyResponse
-    
+type Query { 
+    getLoyaltyDetails(customerid: ID!): LoyaltyResponse  
 }
 
 type Mutation {

@@ -15,15 +15,44 @@ npx create-nx-workspace@latest
 
 Nest JS - Graphql APIs
 ---
+
 ```
 npm install -D @nrwl/nest @nestjs/graphql apollo-server-express graphql-tools graphql @nestjs/apollo ts-morph supertest
-nx g @nrwl/nest:app customer-api
-nx:serve customer-api
-
 ```
-Update the path for auto-schema generation in digital-monorepo/apps/customer-api/src/app/app.module.ts
 
+  Customer API : Login/Registration/Loyalty/Profile information
+  ---
 
+  ```
+    nx g @nrwl/nest:app customer-api
+    nx:serve customer-api
+
+  ``` 
+  ---
+  Catalog API : Search /Browse/Product listing/ Product details (Inventory/Price/Promotion)
+  --- 
+  ```
+  nx g @nrwl/nest:app catalog-api
+  ```
+  ---
+  Marketing API : Content Spots/ Fragments Information
+  ---
+
+  ```
+  nx g @nrwl/nest:app marketing-api
+  ```
+  ---
+  Order API : Add/View/Delete Cart , Create/Copy/Edit Order , Fulfillment Events
+  ---
+  ```
+  nx g @nrwl/nest:app order-api
+  ```
+TODO : 
+1. Create schema.graphql for each <module>-api
+2. Update the path for auto-schema generation in digital-monorepo/apps/<modules>-api/src/app/app.module.ts
+3. Need to add JWT Authentication Setup for order /customer api
+
+--- 
 Next JS - UI  setup
 ---
 

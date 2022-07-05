@@ -1,0 +1,15 @@
+type ProductRequest {
+    skuid: ID!
+    name: String
+    price: Int
+}
+type ProductResponse {
+    data: ProductRequest
+    code: String!
+    status: String!
+}
+
+type Query {
+    getProductDetails(skuid: ID!): ProductResponse
+}
+ 

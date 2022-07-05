@@ -6,10 +6,8 @@ type Customer {
 }
 
 type Query {
- 
     getCustomers: [Customer] 
     getCustomer(id: ID!): Customer
-    
 }
 
 type Mutation {

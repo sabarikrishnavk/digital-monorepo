@@ -1,0 +1,15 @@
+type SearchRequest {
+    categoryid: String
+    searchTerm: String 
+}
+type SearchResponse {
+    data: SearchRequest
+    code: String!
+    status: String!
+}
+
+type Query {
+    getSearchByCategory(categoryid: ID!): SearchResponse  
+    getSearchByTerm(searchTerm: String): SearchResponse    
+}
+ 

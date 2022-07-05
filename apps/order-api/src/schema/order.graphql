@@ -1,0 +1,54 @@
+
+type OrderLine {
+
+     "unique order: format to be defined in service layer eg: <SITE>-<DATETIME of cart creation>-<LOCATION>-<Running SEQUENCE>"
+    orderid: ID!
+     "customerid from profile - for registered - profileid , guest- create a guestid later update to profileid "
+    customerid: ID!
+     "linenumber to identify a item in a order"
+    linenumber: Int
+     "customer entered qty"
+    skuid: String 
+
+     "customer entered qty"
+    qty: Int
+     "Unit of measure from product "
+    uom: String
+     "item price per unit from pricing"
+    itemprice: Int
+     "total discount from promotion"
+    discount: Int
+     "tax if any"
+    tax: Int
+     "final price per unit after promo calculation"
+    finalprice: Int 
+}
+type OrderLineResponse {
+     "Response codes to display static messages in front end"
+    code: String!
+     "Dynamic messages for each action"
+    message: String
+     "status - for each mutation(action)"
+    status: String!
+    
+    data: OrderLine
+}
+
+ type OrderSummary {  
+    linetotal: Int
+    qty: Int
+    finalprice:Int
+    discount:Int
+}
+type OrderResponse { 
+    orderid: ID!
+    code: String!
+    status: String! 
+    summary: OrderSummary 
+} 
+type Query { 
+    
+    getOrder( customerid:ID!,orderid: ID!): OrderResponse
+    
+} 
+ 

@@ -1,0 +1,18 @@
+type InventoryRequest {
+    skuid: ID!
+    location: ID!
+    sth: Int 
+}
+type InventoryResponse {
+    data: InventoryRequest
+    code: String!
+    status: String!
+}
+
+type Query {
+    getInventoryDetails(skuid: ID!): [InventoryResponse]   
+}
+
+type Mutation {
+    updateInventoryDetails( skuid: ID!,location: ID!, sth: Int): InventoryResponse
+}

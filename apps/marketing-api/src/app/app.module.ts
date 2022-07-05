@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path'
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
-import { CustomerResolver} from './customer.resolver';
+import { ContentResolver} from './resolvers/content';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -11,15 +11,15 @@ import { AppService } from './app.service';
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      typePaths: ['./apps/customer-api/src/schema/*.graphql'],
+      typePaths: ['./apps/marketing-api/src/schema/*.graphql'],
       definitions: {
-        path: join(process.cwd(), 'apps/customer-api/src/app/graphql.schema.ts'),
+        path: join(process.cwd(), 'apps/marketing-api/src/app/graphql.schema.ts'),
         outputAs: 'class',
       },
       playground: true
     }), 
   ],
   controllers: [AppController],
-  providers: [AppService,CustomerResolver]
+  providers: [AppService,ContentResolver]
 })
 export class AppModule {}

@@ -1,0 +1,16 @@
+type ContentRequest {
+    contentid: ID!
+    name: String 
+    description: String
+    htmlContent: String
+}
+type ContentResponse {
+    data: ContentRequest
+    code: String!
+    status: String!
+}
+
+type Query { 
+    getContentDetails(contentid: ID!): ContentResponse 
+}
+ 
