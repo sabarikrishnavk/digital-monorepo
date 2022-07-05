@@ -1,0 +1,21 @@
+type LoyaltyRequest {
+    customerid: ID!
+    level: String
+    points: Int
+    status: String
+}
+type LoyaltyResponse {
+    data: LoyaltyRequest
+    code: String!
+    status: String!
+}
+
+type Query {
+  
+    getLoyaltyDetails(customerid: ID!): LoyaltyResponse
+    
+}
+
+type Mutation {
+    updateLoyaltyDetails( customerid: ID!,level: String, points: Int): LoyaltyResponse
+}

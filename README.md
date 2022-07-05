@@ -1,21 +1,39 @@
 
 
 # DigitalMonorepo
+Setup 
+--
+Install nx npm library
+To create new workspace (one time mono repo setup)
+
+```
 npx create-nx-workspace@latest
     workspace : digital-monorepo
     default > apps
 
-Next JS - Graphql APIs
+```
 
+Nest JS - Graphql APIs
+---
+```
 npm install -D @nrwl/nest @nestjs/graphql apollo-server-express graphql-tools graphql @nestjs/apollo ts-morph supertest
 nx g @nrwl/nest:app customer-api
 nx:serve customer-api
 
+```
+Update the path for auto-schema generation in digital-monorepo/apps/customer-api/src/app/app.module.ts
+
+
+Next JS - UI  setup
+---
+
+```
 npm install -D styled-jsx @types/styled-jsx styled-jsx-plugin-sass node-sass-middleware sass 
 npm install -D @nrwl/nest
 nx g @nrwl/next:app customercare-ui
 
 nx g @nrwl/next:lib ecom-ui-components
+```
 >> css
 
 
@@ -23,18 +41,6 @@ nx g @nrwl/next:lib ecom-ui-components
 
 
 This project was generated using [Nx](https://nx.dev).
-
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
-
-🔎 **Smart, Fast and Extensible Build System**
-
-## Adding capabilities to your workspace
-
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
-
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
-
-Below are our core plugins:
 
 - [React](https://reactjs.org)
   - `npm install --save-dev @nrwl/react`
@@ -48,8 +54,7 @@ Below are our core plugins:
   - `npm install --save-dev @nrwl/express`
 - [Node](https://nodejs.org)
   - `npm install --save-dev @nrwl/node`
-
-There are also many [community plugins](https://nx.dev/community) you could add.
+ 
 
 ## Generate an application
 
