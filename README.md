@@ -52,6 +52,11 @@ TODO :
 2. Update the path for auto-schema generation in digital-monorepo/apps/<modules>-api/src/app/app.module.ts
 3. Need to add JWT Authentication Setup for order /customer api
 
+Gateway API : 
+---
+```
+npm install -D @apollo/federation @apollo/subgraph @apollo/gateway
+```
 --- 
 Next JS - UI  setup
 ---

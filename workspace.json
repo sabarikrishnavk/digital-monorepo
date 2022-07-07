@@ -6,6 +6,7 @@
     "customer-api": "apps/customer-api",
     "customercare-ui": "apps/customercare-ui",
     "customercare-ui-e2e": "apps/customercare-ui-e2e",
+    "ecom-gateway-api": "apps/ecom-gateway-api",
     "ecom-ui-components": "libs/ecom-ui-components",
     "marketing-api": "apps/marketing-api",
     "order-api": "apps/order-api"

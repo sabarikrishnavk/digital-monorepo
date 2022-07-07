@@ -1,5 +1,5 @@
-import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
-import { Customer } from './graphql.schema';
+import { Args, Mutation, Query, Resolver,ResolveReference } from '@nestjs/graphql';
+import { Customer } from '../graphql.schema';
  
  
 
@@ -28,6 +28,18 @@ export class CustomerResolver {
             if( customer.id == id ) {
              cust = customer ; 
              return;
+            }  
+        });
+        return cust;
+    }
+    @ResolveReference()
+    resolveReference(reference: { __typename: string; id: string }) {
+    //   return this.orderService.findById(reference.id);
+        let cust = null;
+        this.customers.forEach((customer) => {
+            if( customer.id == reference.id ) {
+            cust = customer ; 
+            return;
             }  
         });
         return cust;

@@ -1,4 +1,8 @@
-type ProductRequest {
+extend schema
+  @link(url: "https://specs.apollo.dev/federation/v2.0",
+        import: ["@key"])
+
+type ProductRequest @key(fields: "skuid"){
     skuid: ID!
     name: String
     price: Int
@@ -9,7 +13,7 @@ type ProductResponse {
     status: String!
 }
 
-type Query {
+extend type Query {
     getProductDetails(skuid: ID!): ProductResponse
 }
  

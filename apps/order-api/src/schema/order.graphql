@@ -1,3 +1,7 @@
+extend schema
+  @link(url: "https://specs.apollo.dev/federation/v2.0",
+        import: ["@key"])
+
 
 type OrderLine {
 
@@ -40,15 +44,14 @@ type OrderLineResponse {
     finalprice:Int
     discount:Int
 }
-type OrderResponse { 
-    orderid: ID!
+type OrderResponse @key(fields: "id")  { 
+    id: ID!
+    ordernumber: Int
     code: String!
     status: String! 
     summary: OrderSummary 
 } 
-type Query { 
-    
-    getOrder( customerid:ID!,orderid: ID!): OrderResponse
-    
+extend type Query { 
+    getOrder(id: ID!): OrderResponse 
 } 
  

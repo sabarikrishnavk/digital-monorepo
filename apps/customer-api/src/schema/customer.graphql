@@ -1,11 +1,16 @@
-type Customer {
+extend schema
+  @link(url: "https://specs.apollo.dev/federation/v2.0",
+        import: ["@key"])
+
+
+type Customer @key(fields: "id") {
     id: ID!
     name: String
     age: Int
     status: String
 }
 
-type Query {
+extend type Query {
     getCustomers: [Customer] 
     getCustomer(id: ID!): Customer
 }

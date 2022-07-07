@@ -1,4 +1,8 @@
-type ContentRequest {
+extend schema
+  @link(url: "https://specs.apollo.dev/federation/v2.0",
+        import: ["@key"])
+
+type ContentRequest @key(fields: "contentid"){
     contentid: ID!
     name: String 
     description: String
@@ -10,7 +14,7 @@ type ContentResponse {
     status: String!
 }
 
-type Query { 
+extend type Query { 
     getContentDetails(contentid: ID!): ContentResponse 
 }
  

@@ -35,14 +35,15 @@ export class OrderSummary {
 }
 
 export class OrderResponse {
-    orderid: string;
+    id: string;
+    ordernumber?: Nullable<number>;
     code: string;
     status: string;
     summary?: Nullable<OrderSummary>;
 }
 
 export abstract class IQuery {
-    abstract getOrder(customerid: string, orderid: string): Nullable<OrderResponse> | Promise<Nullable<OrderResponse>>;
+    abstract getOrder(id: string): Nullable<OrderResponse> | Promise<Nullable<OrderResponse>>;
 }
 
 type Nullable<T> = T | null;
