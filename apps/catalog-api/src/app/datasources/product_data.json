@@ -1,0 +1,34 @@
+{
+    "products": [
+        {
+            "id": "rev-1",
+            "name": "loc-1",
+            "price": 5,
+            "comment": "I would also like to say thank you to all your staff! I would gladly pay over 600 dollars for planet. Planet was worth a fortune to my company. After using planet my business skyrocketed!"
+        },
+        {
+            "id": "rev-2",
+            "name": "name-2",
+            "price": 5,
+            "comment": "It's really wonderful. We have no regrets! Keep up the excellent work."
+        },
+        {
+            "id": "rev-3",
+            "name": "name-3",
+            "price": 5,
+            "comment": "This is simply unbelievable! It's the perfect solution for our business. Really good. I don't always clop, but when I do, it's because of planet"
+        },
+        {
+            "id": "rev-4",
+            "name": "name-4",
+            "price": 2,
+            "comment": "Planet is exactly what our business has been lacking. It's incredible. If you want real marketing that works and effective implementation - planet's got you covered."
+        },
+        {
+            "id": "rev-5",
+            "name": "name-5",
+            "price": 4,
+            "comment": "Thanks planet! I was amazed at the quality of planet. Planet did exactly what you said it does."
+        }
+    ]
+}

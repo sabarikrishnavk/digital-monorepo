@@ -54,9 +54,11 @@ TODO :
 
 Gateway API : 
 ---
-```
-npm install -D @apollo/federation @apollo/subgraph @apollo/gateway
-```
+  ```
+  npm install -D @apollo/federation @apollo/subgraph @apollo/gateway 
+  nx g @nrwl/nest:app marketing-api
+  
+  ```
 --- 
 Next JS - UI  setup
 ---

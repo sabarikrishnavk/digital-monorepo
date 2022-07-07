@@ -4,9 +4,11 @@ import { join } from 'path'
 // import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { ApolloFederationDriver, ApolloFederationDriverConfig } from '@nestjs/apollo';
 import { SearchResolver} from './resolvers/search';
+import {ProductResolver} from './resolvers/product';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import {ProductAPI} from './datasources/ProductApi';
 
 @Module({
   imports: [
@@ -21,6 +23,6 @@ import { AppService } from './app.service';
     }), 
   ],
   controllers: [AppController],
-  providers: [AppService,SearchResolver]
+  providers: [AppService,SearchResolver,ProductResolver,ProductAPI]
 })
 export class AppModule {}

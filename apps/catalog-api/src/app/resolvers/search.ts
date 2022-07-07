@@ -8,7 +8,7 @@ export class SearchResolver {
  
     @Query('getSearchByCategory') 
     getSearchByCategory( @Args('categoryid') categoryid: string):SearchResponse{
-        let result = new SearchResponse();
+        const result = new SearchResponse();
         result.code ="SRCH-101"
         result.status="Success"
 
