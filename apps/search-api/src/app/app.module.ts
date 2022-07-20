@@ -7,7 +7,8 @@ import { SearchResolver} from './resolvers/search';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import {ProductAPI} from './datasources/ProductApi';
+import {ElasticsearchModule} from './elasticsearch.module';
+import {ElasticSearchAPI} from './datasources/elasticsearch';
 
 @Module({
   imports: [
@@ -20,8 +21,9 @@ import {ProductAPI} from './datasources/ProductApi';
       },
       playground: true
     }), 
+    ElasticsearchModule
   ],
   controllers: [AppController],
-  providers: [AppService,SearchResolver,ProductAPI]
+  providers: [AppService,SearchResolver,ElasticSearchAPI]
 })
 export class AppModule {}

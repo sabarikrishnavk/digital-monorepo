@@ -20,7 +20,7 @@ Nest JS - Graphql APIs
 npm install -D @nrwl/nest @nestjs/graphql apollo-server-express graphql-tools graphql @nestjs/apollo ts-morph supertest
 ```
 ```
-npm install -D @elastic/elasticsearch graphql-tools
+npm install -D @elastic/elasticsearch graphql-tools apollo-datasource-rest @nestjs/elasticsearch
 ```
 
   Customer API : Login/Registration/Loyalty/Profile information : Port : 3001

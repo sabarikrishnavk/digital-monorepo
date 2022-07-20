@@ -1,7 +1,7 @@
 
 const params = require('../es-mapping/inventory');
 const PRODUCTS = require('../data/inventory.json').inventory;
-const ElasticSearch = require('elasticsearch');
+const {Client} = require('@elastic/elasticsearch');
 const _ = require('lodash');
 const { zip } = require('lodash');
 
@@ -9,8 +9,8 @@ const { zip } = require('lodash');
  * *** ElasticSearch *** client
  * @type {Client}
  */
-const client = new ElasticSearch.Client({
-  hosts: ['http://127.0.0.1:9200']
+ const client = new Client({
+  node: ['http://127.0.0.1:9200']
 });
 
 const INDEXNAME = "inventory";
