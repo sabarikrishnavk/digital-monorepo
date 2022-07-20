@@ -23,10 +23,6 @@ export abstract class IQuery {
     abstract getInventoryDetails(skuid: string): Nullable<Nullable<InventoryResponse>[]> | Promise<Nullable<Nullable<InventoryResponse>[]>>;
 
     abstract getProductDetails(skuid: string): Nullable<ProductResponse> | Promise<Nullable<ProductResponse>>;
-
-    abstract getSearchByCategory(categoryid: string): Nullable<SearchResponse> | Promise<Nullable<SearchResponse>>;
-
-    abstract getSearchByTerm(searchTerm?: Nullable<string>): Nullable<SearchResponse> | Promise<Nullable<SearchResponse>>;
 }
 
 export abstract class IMutation {
@@ -37,21 +33,11 @@ export class ProductRequest {
     skuid: string;
     name?: Nullable<string>;
     price?: Nullable<number>;
+    attributes?: Nullable<Nullable<string>[]>;
 }
 
 export class ProductResponse {
     data?: Nullable<ProductRequest>;
-    code: string;
-    status: string;
-}
-
-export class SearchRequest {
-    categoryid?: Nullable<string>;
-    searchTerm?: Nullable<string>;
-}
-
-export class SearchResponse {
-    data?: Nullable<SearchRequest>;
     code: string;
     status: string;
 }

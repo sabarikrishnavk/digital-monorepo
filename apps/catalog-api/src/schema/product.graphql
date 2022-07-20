@@ -6,6 +6,7 @@ type ProductRequest @key(fields: "skuid"){
     skuid: ID!
     name: String
     price: Int
+    attributes : [String]
 }
 type ProductResponse {
     data: ProductRequest
@@ -16,4 +17,3 @@ type ProductResponse {
 extend type Query {
     getProductDetails(skuid: ID!): ProductResponse
 }
- 

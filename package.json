@@ -61,6 +61,7 @@
   "dependencies": {
     "@apollo/federation": "^0.36.1",
     "@apollo/subgraph": "^2.0.5",
+    "@elastic/elasticsearch": "^8.2.1",
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
     "@nestjs/platform-express": "^8.0.0",

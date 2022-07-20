@@ -19,8 +19,11 @@ Nest JS - Graphql APIs
 ```
 npm install -D @nrwl/nest @nestjs/graphql apollo-server-express graphql-tools graphql @nestjs/apollo ts-morph supertest
 ```
+```
+npm install -D @elastic/elasticsearch graphql-tools
+```
 
-  Customer API : Login/Registration/Loyalty/Profile information
+  Customer API : Login/Registration/Loyalty/Profile information : Port : 3001
   ---
 
   ```
@@ -29,23 +32,29 @@ npm install -D @nrwl/nest @nestjs/graphql apollo-server-express graphql-tools gr
 
   ``` 
   ---
-  Catalog API : Search /Browse/Product listing/ Product details (Inventory/Price/Promotion)
+  Catalog API : Search /Browse/Product listing/ Product details (Inventory/Price/Promotion) : Port : 3002
   --- 
   ```
   nx g @nrwl/nest:app catalog-api
   ```
   ---
-  Marketing API : Content Spots/ Fragments Information
+  Marketing API : Content Spots/ Fragments Information : Port : 3003
   ---
 
   ```
-  nx g @nrwl/nest:app marketing-api
+  nx g @nrwl/nest:app marketing-api 
   ```
   ---
-  Order API : Add/View/Delete Cart , Create/Copy/Edit Order , Fulfillment Events
+  Order API : Add/View/Delete Cart , Create/Copy/Edit Order , Fulfillment Events : Port : 3004
   ---
   ```
   nx g @nrwl/nest:app order-api
+  ```
+  ---
+  Search API : Search elastic index for product / inventory /storelocator : Port : 3006
+  ---
+  ```
+  nx g @nrwl/nest:app search-api
   ```
 TODO : 
 1. Create schema.graphql for each <module>-api
@@ -72,7 +81,23 @@ nx g @nrwl/next:lib ecom-ui-components
 ```
 >> css
 
-
+Elastic instance:
+----
+```
+docker-compose -f docker-product-es.yml up
+```
+Create index based on es-mapping and load  data into index
+----
+```
+cd setup
+ 
+npm run setup:product
+ 
+npm run setup:inventory
+```
+http://localhost:9200/product/_search 
+<br>
+http://localhost:9200/inventory/_search
 
 
 

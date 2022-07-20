@@ -9,6 +9,7 @@
     "ecom-gateway-api": "apps/ecom-gateway-api",
     "ecom-ui-components": "libs/ecom-ui-components",
     "marketing-api": "apps/marketing-api",
-    "order-api": "apps/order-api"
+    "order-api": "apps/order-api",
+    "search-api": "apps/search-api"
   }
 }

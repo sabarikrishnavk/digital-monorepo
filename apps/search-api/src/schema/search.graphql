@@ -12,4 +12,3 @@ type Query {
     getSearchByCategory(categoryid: ID!): SearchResponse  
     getSearchByTerm(searchTerm: String): SearchResponse    
 }
- 

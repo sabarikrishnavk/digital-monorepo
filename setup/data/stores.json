@@ -1,0 +1,349 @@
+{
+  "stores": [
+    {
+      "storeId": "559",
+      "brandName": "Coles Supermarkets",
+      "brandId": 2,
+      "latitude": -37.815259,
+      "longitude": 144.951615,
+      "distance": 0.21,
+      "storeName": "Coles Spencer St",
+      "address": "201 Spencer St",
+      "suburb": "Melbourne",
+      "state": "VIC",
+      "postcode": "3008",
+      "phone": "(03) 7007 5300",
+      "storeTimezone": "Australia/Melbourne",
+      "tradingHoursToday": {
+        "openNow": "Closed",
+        "storeTime": "Reopens at 6am"
+      },
+      "tradingHours": [{ "daysOfWeek": "Mon-Sun", "storeTime": "6am-11pm" }],
+      "holidayTradingHours": [],
+      "nextDoorStores": [
+        {
+          "storeId": "2877",
+          "storeName": "Spencer St Cbd",
+          "brandId": 3,
+          "brandName": "Liquorland",
+          "tradingHoursToday": {
+            "openNow": "Closed",
+            "storeTime": "reopens at 9am"
+          }
+        }
+      ],
+      "services": []
+    },
+    {
+      "storeId": "602",
+      "brandName": "Coles Supermarkets",
+      "brandId": 2,
+      "latitude": -37.81071,
+      "longitude": 144.962525,
+      "distance": 1.27,
+      "storeName": "Coles Central Melbourne Central",
+      "address": "211 Latrobe St",
+      "suburb": "Melbourne",
+      "state": "VIC",
+      "postcode": "3000",
+      "phone": "(03) 9663 5245",
+      "storeTimezone": "Australia/Melbourne",
+      "tradingHoursToday": {
+        "openNow": "Closing Soon",
+        "storeTime": "Today 6am-12am"
+      },
+      "tradingHours": [
+        { "daysOfWeek": "Mon-Fri", "storeTime": "6am-12am" },
+        { "daysOfWeek": "Sat-Sun", "storeTime": "7am-12am" }
+      ],
+      "holidayTradingHours": [],
+      "nextDoorStores": [
+        {
+          "storeId": "3818",
+          "storeName": "Melbourne Central Express",
+          "brandId": 3,
+          "brandName": "Liquorland",
+          "tradingHoursToday": {
+            "openNow": "Closed",
+            "storeTime": "reopens at 10am"
+          }
+        }
+      ],
+      "services": []
+    },
+    {
+      "storeId": "671",
+      "brandName": "Coles Supermarkets",
+      "brandId": 2,
+      "latitude": -37.817755,
+      "longitude": 144.9649,
+      "distance": 1.34,
+      "storeName": "Coles Central Melbourne Cbd",
+      "address": "Elizabeth St & Flinders St",
+      "suburb": "Melbourne",
+      "state": "VIC",
+      "postcode": "3000",
+      "phone": "(03) 9652 9200",
+      "storeTimezone": "Australia/Melbourne",
+      "tradingHoursToday": {
+        "openNow": "Closing Soon",
+        "storeTime": "Today 6am-12am"
+      },
+      "tradingHours": [
+        { "daysOfWeek": "Mon-Fri", "storeTime": "6am-12am" },
+        { "daysOfWeek": "Sat-Sun", "storeTime": "7am-12am" }
+      ],
+      "holidayTradingHours": [],
+      "nextDoorStores": [
+        {
+          "storeId": "3845",
+          "storeName": "Elizabeth St",
+          "brandId": 3,
+          "brandName": "Liquorland",
+          "tradingHoursToday": {
+            "openNow": "Closed",
+            "storeTime": "reopens at 9am"
+          }
+        }
+      ],
+      "services": []
+    },
+    {
+      "storeId": "512",
+      "brandName": "Coles Supermarkets",
+      "brandId": 2,
+      "latitude": -37.831884,
+      "longitude": 144.960451,
+      "distance": 2.01,
+      "storeName": "Coles South Melbourne",
+      "address": "229 Coventry St",
+      "suburb": "South Melbourne",
+      "state": "VIC",
+      "postcode": "3205",
+      "phone": "(03) 9699 1077",
+      "storeTimezone": "Australia/Melbourne",
+      "tradingHoursToday": {
+        "openNow": "Closed",
+        "storeTime": "Reopens at 6am"
+      },
+      "tradingHours": [{ "daysOfWeek": "Mon-Sun", "storeTime": "6am-10pm" }],
+      "holidayTradingHours": [],
+      "nextDoorStores": [
+        {
+          "storeId": "3728",
+          "storeName": "South Melbourne",
+          "brandId": 5,
+          "brandName": "Vintage Cellars",
+          "tradingHoursToday": {
+            "openNow": "Closed",
+            "storeTime": "reopens at 9am"
+          }
+        },
+        {
+          "storeId": "3304",
+          "storeName": "South Melbourne",
+          "brandId": 3,
+          "brandName": "Liquorland",
+          "tradingHoursToday": {
+            "openNow": "Closed",
+            "storeTime": "reopens at 10am"
+          }
+        }
+      ],
+      "services": []
+    },
+    {
+      "storeId": "6762",
+      "brandName": "Coles Express",
+      "brandId": 1,
+      "latitude": -37.79757099,
+      "longitude": 144.967635,
+      "distance": 2.57,
+      "storeName": "Coles Express Carlton (vic)",
+      "address": "406 Lygon (cnr Elgin Streets)",
+      "suburb": "Carlton",
+      "state": "VIC",
+      "postcode": "3053",
+      "phone": "(03) 8871 2626",
+      "storeTimezone": "Australia/Melbourne",
+      "tradingHoursToday": { "openNow": "Open", "storeTime": "Today 24 hours" },
+      "tradingHours": [{ "daysOfWeek": "Mon-Sun", "storeTime": "24 hours" }],
+      "holidayTradingHours": [],
+      "nextDoorStores": [],
+      "services": [
+        { "serviceName": "Shell Unleaded 95", "serviceCategory": "Fuels" },
+        { "serviceName": "Shell Diesel", "serviceCategory": "Fuels" },
+        { "serviceName": "Shell AutoGas", "serviceCategory": "Fuels" },
+        { "serviceName": "Open 24 hours", "serviceCategory": "Services" },
+        { "serviceName": "ATM", "serviceCategory": "Services" },
+        { "serviceName": "Hot food", "serviceCategory": "Services" },
+        { "serviceName": "Coffee", "serviceCategory": "Services" },
+        { "serviceName": "Shell V-Power 98", "serviceCategory": "Fuels" },
+        { "serviceName": "Shell Unleaded 91", "serviceCategory": "Fuels" }
+      ]
+    },
+    {
+      "storeId": "646",
+      "brandName": "Coles Supermarkets",
+      "brandId": 2,
+      "latitude": -37.838665,
+      "longitude": 144.941366,
+      "distance": 2.61,
+      "storeName": "Coles Port Melbourne",
+      "address": "Bay & Liardet Streets",
+      "suburb": "Port Melbourne",
+      "state": "VIC",
+      "postcode": "3207",
+      "phone": "(03) 8682 2500",
+      "storeTimezone": "Australia/Melbourne",
+      "tradingHoursToday": {
+        "openNow": "Closed",
+        "storeTime": "Reopens at 7am"
+      },
+      "tradingHours": [{ "daysOfWeek": "Mon-Sun", "storeTime": "7am-10pm" }],
+      "holidayTradingHours": [],
+      "nextDoorStores": [
+        {
+          "storeId": "3729",
+          "storeName": "Port Melbourne",
+          "brandId": 5,
+          "brandName": "Vintage Cellars",
+          "tradingHoursToday": {
+            "openNow": "Closed",
+            "storeTime": "reopens at 9am"
+          }
+        }
+      ],
+      "services": []
+    },
+    {
+      "storeId": "1973",
+      "brandName": "Coles Express",
+      "brandId": 1,
+      "latitude": -37.829658,
+      "longitude": 144.917236,
+      "distance": 3.13,
+      "storeName": "Coles Express Westgate North",
+      "address": "46-62 Cook St",
+      "suburb": "Port Melbourne",
+      "state": "VIC",
+      "postcode": "3207",
+      "phone": "(03) 9075 1498",
+      "storeTimezone": "Australia/Melbourne",
+      "tradingHoursToday": { "openNow": "Open", "storeTime": "Today 24 hours" },
+      "tradingHours": [{ "daysOfWeek": "Mon-Sun", "storeTime": "24 hours" }],
+      "holidayTradingHours": [],
+      "nextDoorStores": [],
+      "services": [
+        { "serviceName": "Shell Unleaded 95", "serviceCategory": "Fuels" },
+        { "serviceName": "Shell Diesel", "serviceCategory": "Fuels" },
+        { "serviceName": "Shell AutoGas", "serviceCategory": "Fuels" },
+        { "serviceName": "Open 24 hours", "serviceCategory": "Services" },
+        { "serviceName": "ATM", "serviceCategory": "Services" },
+        { "serviceName": "Hot food", "serviceCategory": "Services" },
+        { "serviceName": "Coffee", "serviceCategory": "Services" },
+        { "serviceName": "Shell V-Power Diesel", "serviceCategory": "Fuels" },
+        { "serviceName": "Shell V-Power 98", "serviceCategory": "Fuels" },
+        { "serviceName": "Shell Unleaded 91", "serviceCategory": "Fuels" },
+        null
+      ]
+    },
+    {
+      "storeId": "583",
+      "brandName": "Coles Supermarkets",
+      "brandId": 2,
+      "latitude": -37.798115,
+      "longitude": 144.977958,
+      "distance": 3.15,
+      "storeName": "Coles Local Fitzroy",
+      "address": "95 - 103 Johnston St",
+      "suburb": "Fitzroy",
+      "state": "VIC",
+      "postcode": "3065",
+      "phone": "(03) 9415 2100",
+      "storeTimezone": "Australia/Melbourne",
+      "tradingHoursToday": {
+        "openNow": "Closed",
+        "storeTime": "Reopens at 7am"
+      },
+      "tradingHours": [{ "daysOfWeek": "Mon-Sun", "storeTime": "7am-10pm" }],
+      "holidayTradingHours": [],
+      "nextDoorStores": [
+        {
+          "storeId": "2485",
+          "storeName": "Fitzroy",
+          "brandId": 3,
+          "brandName": "Liquorland",
+          "tradingHoursToday": {
+            "openNow": "Closed",
+            "storeTime": "reopens at 11am"
+          }
+        }
+      ],
+      "services": []
+    },
+    {
+      "storeId": "7842",
+      "brandName": "Coles Supermarkets",
+      "brandId": 2,
+      "latitude": -37.8035,
+      "longitude": 144.983912,
+      "distance": 3.26,
+      "storeName": "Coles Collingwood",
+      "address": "172 Smith St",
+      "suburb": "Collingwood",
+      "state": "VIC",
+      "postcode": "3066",
+      "phone": "(03) 9230 1600",
+      "storeTimezone": "Australia/Melbourne",
+      "tradingHoursToday": {
+        "openNow": "Closed",
+        "storeTime": "Reopens at 7am"
+      },
+      "tradingHours": [{ "daysOfWeek": "Mon-Sun", "storeTime": "7am-11pm" }],
+      "holidayTradingHours": [],
+      "nextDoorStores": [
+        {
+          "storeId": "2984",
+          "storeName": "Collingwood",
+          "brandId": 3,
+          "brandName": "Liquorland",
+          "tradingHoursToday": {
+            "openNow": "Closed",
+            "storeTime": "reopens at 10am"
+          }
+        }
+      ],
+      "services": []
+    },
+    {
+      "storeId": "6801",
+      "brandName": "Coles Express",
+      "brandId": 1,
+      "latitude": -37.81282999,
+      "longitude": 144.990451,
+      "distance": 3.52,
+      "storeName": "Coles Express East Melbourne",
+      "address": "1181 Hoddle (cnr Gipps Streets)",
+      "suburb": "East Melbourne",
+      "state": "VIC",
+      "postcode": "3002",
+      "phone": "(03)90751414",
+      "storeTimezone": "Australia/Melbourne",
+      "tradingHoursToday": { "openNow": "Open", "storeTime": "Today 24 hours" },
+      "tradingHours": [{ "daysOfWeek": "Mon-Sun", "storeTime": "24 hours" }],
+      "holidayTradingHours": [],
+      "nextDoorStores": [],
+      "services": [
+        { "serviceName": "Shell Unleaded 95", "serviceCategory": "Fuels" },
+        { "serviceName": "Shell Diesel", "serviceCategory": "Fuels" },
+        { "serviceName": "Open 24 hours", "serviceCategory": "Services" },
+        { "serviceName": "ATM", "serviceCategory": "Services" },
+        { "serviceName": "Hot food", "serviceCategory": "Services" },
+        { "serviceName": "Coffee", "serviceCategory": "Services" },
+        { "serviceName": "Shell V-Power 98", "serviceCategory": "Fuels" },
+        { "serviceName": "Shell Unleaded 91", "serviceCategory": "Fuels" }
+      ]
+    }
+  ]
+}
