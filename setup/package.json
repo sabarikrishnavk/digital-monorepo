@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "setup:product": "node ./create/product.js",
-    "setup:inventory": "node ./create/inventory.js"
+    "setup:inventory": "node ./create/inventory.js",
+    "setup:useraction": "node ./create/useraction.js"
   },
   "keywords": [],
   "author": "",

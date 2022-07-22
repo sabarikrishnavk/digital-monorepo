@@ -1,0 +1,24 @@
+{
+    "settings": {
+      "number_of_shards" : 1
+    },
+    "mappings": {
+      "properties": {
+        "id": {
+          "type": "text"
+        },
+        "sku": {
+          "type": "text"
+        },
+        "user": {
+          "type": "text"
+        },
+        "action": {
+          "type": "text"
+        },
+        "actionid": {
+          "type": "text"
+        }
+      }
+    }
+  }

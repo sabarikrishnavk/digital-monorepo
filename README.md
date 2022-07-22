@@ -94,8 +94,40 @@ cd setup
 npm run setup:product
  
 npm run setup:inventory
+
+npm run setup:useraction
+
 ```
+
+join the indexes and create an aliases for search(bigdata):
+```
+POST /_aliases
+{
+  "actions": [
+    {
+      "add": {
+        "index": "product",
+        "alias": "bigdata"
+      }
+      
+    },{ 
+      "add": {
+        "index": "inventory",
+        "alias": "bigdata"
+      }
+    },{
+      "add": {
+        "index": "useraction",
+        "alias": "bigdata" 
+      }
+    }
+  ]
+}
+````
+
 http://localhost:9200/product/_search 
+<br>
+http://localhost:9200/useraction/_search 
 <br>
 http://localhost:9200/inventory/_search
 
