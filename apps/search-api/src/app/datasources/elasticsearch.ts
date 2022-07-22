@@ -9,7 +9,16 @@ export class ElasticSearchAPI {
     ) {}
 
     async getProducts(): Promise<any[]> {
-        const results = await this.client.search({ index: 'product' });
+        const results = await this.client.search(
+            { 
+                index: 'product' ,
+                query: {
+                    match: {
+                        country: 'France'
+                    }
+                }
+            });
+        console.log(results);
         return results.hits.hits.map((hit) => hit._source);
     }
 }

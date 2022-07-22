@@ -84,7 +84,7 @@ nx g @nrwl/next:lib ecom-ui-components
 Elastic instance:
 ----
 ```
-docker-compose -f docker-product-es.yml up
+docker-compose -f docker-db-es-redis.yml up
 ```
 Create index based on es-mapping and load  data into index
 ----

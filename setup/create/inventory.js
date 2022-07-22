@@ -9,100 +9,58 @@ const { zip } = require('lodash');
  * *** ElasticSearch *** client
  * @type {Client}
  */
- const client = new Client({
+const client = new Client({
   node: ['http://127.0.0.1:9200']
 });
 
 const INDEXNAME = "inventory";
 
-async function deleteIndex (indexName){
-  console.log('deleteIndex');
-
-  return await  new Promise(function (resolve, reject) {
-    client.indices.delete(
-    {
-      index: indexName
-    },
-    (error, response, status) => {
-      if(!error) {
-        console.info("🚀 Deleted index");
-        createIndex(indexName);
-        console.info(response);
-      } else {
-        console.info(error);
-      }
-  
-    }
-    );
-  });
-}   
-
-async function createIndex(indexName){
-  console.log('createIndex');
-
-  return await  new Promise(function (resolve, reject) {
-    client.indices.create(
-      {
-        index: indexName,
-        body: params
-      },
-      (error, response, status) => {
-        if(!error) {
-          console.info("\n🚀 Created a new index");
-          loadIndex(collectionBulk);
-          console.info(response);
-          console.info('\n');
-        } else {
-          console.info(error);
-        }
-
-      }
-    ); 
-  });
-}   
-
-async function loadIndex (collectionBulk){
-  console.log('loadIndex');
-
-  return await  new Promise(function (resolve, reject) {
-
-    
-    client.bulk({body: collectionBulk}, function (err, r) {
-      if (err) {
-        console.log(`Failed Bulk operation\n`, err);
-      } else {
-        console.log(`🚀 Successfully imported ${_.keys(PRODUCTS).length} items \n`);
-      }
-    }); 
-  });
-
-} 
-let initialBulk = {index: {_index: INDEXNAME}};
-let collectionBulk = [];
-_.map(_.keys(PRODUCTS), id => {
-  collectionBulk = [
-    ...collectionBulk, 
-    initialBulk, 
-    PRODUCTS[id]
-  ];
-});
- 
-async function init(){
-
-
- 
+async function run () {
   let isExist = await client.indices.exists({
     index: INDEXNAME 
   }); 
 
   if(isExist){
     console.log('index exists'); 
-    deleteIndex(INDEXNAME);  
-  }  else{ 
-    createIndex(INDEXNAME);  
+    await client.indices.delete({index: INDEXNAME});
+  }
+  
+  await client.indices.create({
+    index: INDEXNAME,
+    body: params 
+  }, { ignore: [400] })
+
+ 
+
+  const operations = PRODUCTS.flatMap(doc => [{ index: { _index:INDEXNAME } }, doc])
+
+  const bulkResponse = await client.bulk({ refresh: true, operations })
+
+  if (bulkResponse.errors) {
+    const erroredDocuments = []
+    // The items array has the same order of the dataset we just indexed.
+    // The presence of the `error` key indicates that the operation
+    // that we did for the document has failed.
+    bulkResponse.items.forEach((action, i) => {
+      const operation = Object.keys(action)[0]
+      if (action[operation].error) {
+        erroredDocuments.push({
+          // If the status is 429 it means that you can retry the document,
+          // otherwise it's very likely a mapping error, and you should
+          // fix the document before to try it again.
+          status: action[operation].status,
+          error: action[operation].error,
+          operation: body[i * 2],
+          document: body[i * 2 + 1]
+        })
+      }
+    })
+    console.log(erroredDocuments)
   }
 
-
+  const count = await client.count({ index: INDEXNAME})
+  console.log(count)
 }
-init(); 
+
+run().catch(console.log)
 
