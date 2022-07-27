@@ -1,0 +1,157 @@
+openapi: 3.0.1
+info:
+  title: Cart API
+  description:  Cart API
+  contact:
+    name:  Cart API Support
+    email: cartapi@gmail.com
+  license:
+    name:  Monorepo
+  version: 1.0.0
+externalDocs:
+  description: Basket API Documentation
+  url: https://googlecom
+tags:
+  - name: Cart APIs
+    description: cart Apis
+paths:
+  /cart/{cartid}:
+    summary: cart operations
+    get:
+      tags:
+        - Cart APIs
+      parameters:
+        - name: cartid
+          in: path
+          description: The cartid
+          required: true
+          schema:
+            format: uuid
+            type: string
+          example: '0804'
+      summary: get cart info by cartid
+      description: Returns Cart details
+      operationId: getCartDetails
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CartSummaryResponse'
+              examples:
+                SampleCartSummary:
+                  value: |-
+                    {
+                      "cartid" : "C123",
+                      "userid" : "U123",
+                      "status" : "201"
+                      "event" : "ITEM_UPDATE"
+                      "summary" : {
+                        "total" : 100.0
+                      }
+                    }
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas: 
+    # Schema for CartSummary Response
+    CartSummaryResponse:
+      type: object
+      properties:
+        cartid:
+          type: string
+        userid:
+          type: string
+        status:
+          $ref: '#/components/schemas/SuccessStatus'
+        event:
+          $ref: '#/components/schemas/CartEvent'
+        summary: 
+          $ref: '#/components/schemas/CartSummary'
+          
+    # Schema for CartSummary Response
+    CartSummary:
+      type: object
+      properties:
+        productprice:
+          format: double
+          type: number
+          description : total product price
+        discount:
+          format: double
+          type: number
+          description : total discount for cart
+        shipping:
+          format: double
+          type: number
+          description : total shipping for cart 
+        total:
+          format: double
+          type: number
+          description : total price = total productprice - discount - shipping
+        lineitemcount:
+          format: integer
+          type: number
+          description : number of line items
+        quantity:
+          format: integer
+          type: number
+          description : total quantity  
+          
+          
+    # Schema for cart event mapping
+    CartEvent: 
+      type : string
+      description: 'Cart events'
+      enum:
+        - 'ITEM_ADD'
+        - 'ITEM_UPDATE'
+        - 'ITEM_DELETE'
+        - 'PROMO_ADD'
+        - 'PROMO_DELETE'
+        - 'ADDRESS_ADD'
+        - 'ADDRESS_UPDATE'
+        - 'ADDRESS_DELETE'
+        - 'PAYMENT_ADD'
+        - 'PAYMENT_UPDATE'
+        - 'PAYMENT_DELETE'
+      default: 'ITEM_ADD'
+        
+    # Schema for success status
+    SuccessStatus: 
+      type : string 
+      description: 'success status'
+      enum:
+        - '200'
+        - '201' 
+      default: '200'
+      
+    # Schema for error status
+    ErrorStatus: 
+      type : string
+      description: 'error status'
+      enum:
+        - '401'
+        - '404'
+        - '424'
+        - '501'
+        - '502'
+        - '503' 
+      default: '404'
+    # Schema for error response body
+    
+    Error:
+      type: object
+      properties:
+        code: 
+          $ref: '#/components/schemas/ErrorStatus'
+        message:
+          type: string
+      required:
+        - code
+        - message
