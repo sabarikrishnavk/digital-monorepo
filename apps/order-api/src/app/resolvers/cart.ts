@@ -1,5 +1,5 @@
 import { Args, Query, Resolver ,ResolveReference} from '@nestjs/graphql';
-import { OrderResponse } from '../graphql.schema';
+import { OrderResponse, StatusCode } from '../graphql.schema';
  
  
 
@@ -10,7 +10,7 @@ export class CartResolver {
     getOrder(  @Args('id') id: string):OrderResponse{
         const result = new OrderResponse();
         result.code ="CART-101"
-        result.status="Success"
+        result.status=StatusCode.HTTP200;
 
         return result;
     }
@@ -18,8 +18,8 @@ export class CartResolver {
     resolveReference(reference: { __typename: string; id: string }) {
     //   return this.orderService.findById(reference.id);
         const result = new OrderResponse();
-        result.code ="CART-101"
-        result.status="Success"
+        result.code ="CART-101";
+        result.status=StatusCode.HTTP200;
 
         return result;
     }

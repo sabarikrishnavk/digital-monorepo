@@ -7,6 +7,15 @@
 
 /* tslint:disable */
 /* eslint-disable */
+export enum StatusCode {
+    HTTP200 = "HTTP200",
+    HTTP201 = "HTTP201",
+    HTTP401 = "HTTP401",
+    HTTP404 = "HTTP404",
+    HTTP501 = "HTTP501",
+    HTTP503 = "HTTP503"
+}
+
 export class OrderLine {
     orderid: string;
     customerid: string;
@@ -23,7 +32,7 @@ export class OrderLine {
 export class OrderLineResponse {
     code: string;
     message?: Nullable<string>;
-    status: string;
+    status: StatusCode;
     data?: Nullable<OrderLine>;
 }
 
@@ -38,7 +47,7 @@ export class OrderResponse {
     id: string;
     ordernumber?: Nullable<number>;
     code: string;
-    status: string;
+    status: StatusCode;
     summary?: Nullable<OrderSummary>;
 }
 

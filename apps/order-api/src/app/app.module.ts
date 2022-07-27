@@ -7,6 +7,11 @@ import { CartResolver} from './resolvers/cart';
 import { AppController } from './app.controller';
 import { AppService } from './app.service'; 
 
+const mocks = {
+  Int: () => 6,
+  Float: () => 22.1,
+  String: () => 'Hello',
+};
 @Module({
   imports: [
     GraphQLModule.forRoot<ApolloFederationDriverConfig>({
@@ -16,6 +21,7 @@ import { AppService } from './app.service';
         path: join(process.cwd(), 'apps/order-api/src/app/graphql.schema.ts'),
         outputAs: 'class'
       },
+      mocks: mocks,
       playground: true
     }), 
   ],

@@ -3,6 +3,7 @@ extend schema
         import: ["@key"])
 
 
+
 type OrderLine {
 
      "unique order: format to be defined in service layer eg: <SITE>-<DATETIME of cart creation>-<LOCATION>-<Running SEQUENCE>"
@@ -19,13 +20,13 @@ type OrderLine {
      "Unit of measure from product "
     uom: String
      "item price per unit from pricing"
-    itemprice: Int
+    itemprice: Float
      "total discount from promotion"
-    discount: Int
+    discount: Float
      "tax if any"
-    tax: Int
+    tax: Float
      "final price per unit after promo calculation"
-    finalprice: Int 
+    finalprice: Float 
 }
 type OrderLineResponse {
      "Response codes to display static messages in front end"
@@ -33,24 +34,32 @@ type OrderLineResponse {
      "Dynamic messages for each action"
     message: String
      "status - for each mutation(action)"
-    status: String!
+    status: StatusCode!
     
     data: OrderLine
 }
-
  type OrderSummary {  
-    linetotal: Int
+    linetotal: Float
     qty: Int
-    finalprice:Int
-    discount:Int
+    finalprice:Float
+    discount:Float
 }
 type OrderResponse @key(fields: "id")  { 
     id: ID!
     ordernumber: Int
     code: String!
-    status: String! 
+    status: StatusCode!
     summary: OrderSummary 
 } 
+"Status code for operations"
+enum StatusCode {
+    HTTP200
+    HTTP201
+    HTTP401
+    HTTP404
+    HTTP501
+    HTTP503
+}
 extend type Query { 
     getOrder(id: ID!): OrderResponse 
 } 
