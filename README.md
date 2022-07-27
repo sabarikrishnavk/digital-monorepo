@@ -134,6 +134,16 @@ http://localhost:9200/inventory/_search
 --Open API to graphql
 https://github.com/IBM/openapi-to-graphql
 
+```
+cd setup/schema
+npm i -s openapi-to-graphql
+openapi-to-graphql cart-schema.yaml
+
+
+```
+Visit http://localhost:3000/graphql
+
+
 This project was generated using [Nx](https://nx.dev).
 
 - [React](https://reactjs.org)

@@ -16,11 +16,17 @@
             "action": "ORDER",
             "actionid":"O123",
             "user" : "U123",
-            "sku"  : "P3"
+            "   "  : "P2"
         },
         {
             "action": "ORDER",
             "actionid":"O123",
+            "user" : "U123",
+            "sku"  : "P3"
+        },
+        {
+            "action": "LIST",
+            "actionid":"L123",
             "user" : "U123",
             "sku"  : "P3"
         },{
